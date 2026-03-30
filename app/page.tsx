@@ -344,10 +344,12 @@ export default function NuflaatWireframe() {
         </div>
       </section>
 
-      {/* ── 오븐 섹션 — AI 스티커 만들기 ── */}
-      {/* 모바일: 1:1 / 데스크탑: 60vh */}
-      <section className="relative overflow-hidden">
-        <div className="relative aspect-square w-full bg-[#797979] lg:aspect-auto lg:h-[60vh]">
+      {/* ── 오븐 + 모델 섹션 ── */}
+      {/* 모바일: 세로로 쌓임 / 데스크탑: 좌우 50:50 나란히 */}
+      <section className="flex flex-col lg:flex-row">
+
+        {/* 오븐 — AI 스티커 만들기 */}
+        <div className="relative aspect-square w-full bg-[#797979] lg:aspect-auto lg:h-[60vh] lg:w-1/2">
           <div className="absolute left-3 top-3 z-10 rounded bg-white/70 px-2 py-0.5 text-[10px] text-gray-500">이미지/영상 영역</div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-white/30 bg-white/10 lg:h-32 lg:w-32">
@@ -364,12 +366,9 @@ export default function NuflaatWireframe() {
             </button>
           </div>
         </div>
-      </section>
 
-      {/* ── 모델 섹션 — 컬렉션 보기 ── */}
-      {/* 모바일: 1:1 / 데스크탑: 60vh */}
-      <section className="relative overflow-hidden">
-        <div className="relative aspect-square w-full bg-[#9e9e9e] lg:aspect-auto lg:h-[60vh]">
+        {/* 모델 — 컬렉션 보기 */}
+        <div className="relative aspect-square w-full bg-[#9e9e9e] lg:aspect-auto lg:h-[60vh] lg:w-1/2">
           <div className="absolute left-3 top-3 z-10 rounded bg-white/70 px-2 py-0.5 text-[10px] text-gray-500">이미지/영상 영역</div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-white/30 bg-white/10 lg:h-32 lg:w-32">
@@ -391,6 +390,7 @@ export default function NuflaatWireframe() {
             </a>
           </div>
         </div>
+
       </section>
 
       {/* ── Footer ── */}
