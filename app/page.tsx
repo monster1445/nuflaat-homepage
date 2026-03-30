@@ -163,20 +163,6 @@ function MainBanner({ banners }: { banners: BannerItem[] }) {
 
             {/* 하단 콘텐츠 */}
             <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 px-4 pb-10">
-              {hasMultiple && (
-                <div className="flex w-full gap-[3px]">
-                  {banners.map((_, i) => (
-                    <div key={i} className="relative h-[2px] flex-1 overflow-hidden rounded-full bg-white/30">
-                      <div
-                        className="absolute inset-y-0 left-0 rounded-full bg-white"
-                        style={{
-                          width: i < activeIndex ? "100%" : i === activeIndex ? `${progress}%` : "0%",
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
               <p className="w-full text-center text-lg font-semibold tracking-[0.08em] text-white drop-shadow-md">
                 {banner.title}
               </p>
@@ -190,6 +176,20 @@ function MainBanner({ banners }: { banners: BannerItem[] }) {
                     >
                       {cta.label}
                     </a>
+                  ))}
+                </div>
+              )}
+              {hasMultiple && (
+                <div className="flex w-full gap-[3px]">
+                  {banners.map((_, i) => (
+                    <div key={i} className="relative h-[2px] flex-1 overflow-hidden rounded-full bg-white/30">
+                      <div
+                        className="absolute inset-y-0 left-0 rounded-full bg-white"
+                        style={{
+                          width: i < activeIndex ? "100%" : i === activeIndex ? `${progress}%` : "0%",
+                        }}
+                      />
+                    </div>
                   ))}
                 </div>
               )}
